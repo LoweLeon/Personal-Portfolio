@@ -1,136 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CVS</title>
-    <link href="https://bootswatch.com/5/materia/bootstrap.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://icons.getbootstrap.com/assets/font/bootstrap-icons.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <style>
-        body {
-          font-family: Arial, sans-serif;
-          background-color: #f4f4f4;
-          margin: 0;
-          padding: 0;
-          display: flex;
-          justify-content: center;
-          align-items: flex-start;
-          min-height: 100vh;
-        }
-    
-        .container {
-          background: white;
-          padding: 20px;
-          border-radius: 10px;
-          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-          width: 100%;
-          max-width: 500px;
-          text-align: center;
-          margin-top: 40px;
-        }
-    
-        h1 {
-          color: #333;
-          margin-bottom: 20px;
-        }
-    
-        .project {
-          margin-bottom: 20px;
-        }
-    
-        .project img {
-          width: 100%;
-          max-height: 250px;
-          object-fit: cover;
-          border-radius: 8px;
-        }
-    
-        .caption {
-          margin-top: 8px;
-          font-size: 14px;
-          color: #555;
-        }
-    
-        .portfolio {
-          margin-top: 30px;
-          text-align: left;
-        }
-    
-        .portfolio label {
-          display: block;
-          font-weight: bold;
-          margin-bottom: 8px;
-        }
-    
-        .portfolio select {
-          width: 100%;
-          padding: 10px;
-          border: 1px solid #ccc;
-          border-radius: 6px;
-          font-size: 16px;
-        }
-    
-        .portfolio-content {
-          margin-top: 20px;
-          padding: 10px;
-          background-color: #eee;
-          border-radius: 6px;
-          display: none;
-        }
-      </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Robert Joshua De Leon | Portfolio</title>
+  <link href="https://bootswatch.com/5/materia/bootstrap.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #f5f7fa;
+      font-family: 'Segoe UI', sans-serif;
+      color: #333;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .profile-img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 20px auto;
+      border: 3px solid #007bff;
+    }
+
+    h1, h2 {
+      text-align: center;
+    }
+
+    h2 {
+      margin-top: 40px;
+      font-size: 24px;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .section {
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Robert Joshua C. De Leon</h1>
+  <div class="container">
+    <img src="480635995_1316106223056524_81274623866079125_n.jpg" alt="Profile Photo" class="profile-img" />
+    <h1>Robert Joshua De Leon</h1>
+    <h2>Birthdate: 22/06/04</h2>
 
-        <div class="photo id">
-            <img src="DSC_0518[1].jpg" alt="img white background">
-        </div>
+    <div class="section">
+      <h2>Education</h2>
+      <p>Elementary and High School studies at Abbas Orchard</p>
+      <p>Currently enrolled in Bachelor of Science in Information Technology - IT 2A at [Your School Name].</p>
+    </div>
 
-        <div class="project">
-            <img src="https://via.placeholder.com/400x250?text=Project+2" alt="Project 2" />
-            <div class="caption">Data Structures 2A</div>
-          </div>
-      
-          <div class="portfolio">
-            <label for="portfolio-select">Portfolio Sections:</label>
-            <select id="portfolio-select">
-              <option value="">-- Select a Section --</option>
-              <option value="name">Full Name</option>
-              <option value="education">Education</option>
-              <option value="projects">Projects</option>
-              <option value="skills">Skills</option>
-              <option value="affiliation">Affiliation</option>
-              <option value="research">Research</option>
-            </select>
-      
-            <div id="portfolio-content" class="portfolio-content"></div>
-          </div>
-        </div>
-      
-        <script>
-          const select = document.getElementById('portfolio-select');
-          const content = document.getElementById('portfolio-content');
-      
-          const data = {
-            name: "Robert Joshua de Leon",
-            education: "Currently enrolled in BS Information Technology, Section IT 2A.",
-            projects: "Placeholder for project descriptions or links to portfolios.",
-            skills: "Placeholder for technical and soft skills.",
-            affiliation: "Optional affiliation details can go here.",
-            research: "Optional research summary or topics of interest."
-          };
-      
-          select.addEventListener('change', () => {
-            const value = select.value;
-            if (value && data[value]) {
-              content.style.display = 'block';
-              content.textContent = data[value];
-            } else {
-              content.style.display = 'none';
-              content.textContent = '';
-            }
-          });
-        </script>
+    <div class="section">
+      <h2>Projects</h2>
+      <ul>
+        <li><a href="https://github.com/NotDaloenFR/deleon" target="_blank">Introduction to Computing Portfolio</a></li>
+        <li><a href="https://github.com/LoweLeon/DataStructures2A" target="_blank">Data Structures 2A Repository</a></li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>Java Programming</li>
+        <li>MySQL Database</li>
+        <li>Responsive Web Design</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Affiliation (Optional)</h2>
+      <p>Member of the [Organization/Club Name], contributing to [Short description].</p>
+    </div>
+
+    <div class="section">
+      <h2>Research (Optional)</h2>
+      <p>Currently exploring topics in Human-Computer Interaction and web usability studies.</p>
+    </div>
+
+    <div class="section">
+      <h2>Connect with Me</h2>
+      <ul>
+        <li><a href="https://www.instagram.com/hjimnoe/" target="_blank">Instagram</a></li>
+        <li><a href="https://discord.com/channels/@me" target="_blank">Discord</a></li>
+        <li><a href="https://bsky.app/profile/beavertoates.bsky.social" target="_blank">Bluesky</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
 </html>
